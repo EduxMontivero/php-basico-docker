@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  web:
+    container_name: web-php
+    image: php
+    restart: always
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
